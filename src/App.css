@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'PartialSansKR-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: '양진체';
+    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'S-CoreDream-3Light';
+}
+a{color: black;}
+a:hover{color: yellowgreen;}
+
+#root {
+  width: 100vw; height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 상단바 */
+.nav{
+  width: 100vw;
+  height: 30vh;
+  justify-content: space-between;
+}
+/* 로그인버튼 */
+.loginBtn{
+  width: 10vw;
+  float:right;
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+}
+.loginBtn > div {margin-left: 1vw;}
+/* 로고 */
+.logo{
+  width: 100%;
+  display: flex;
+  font-family: 'PartialSansKR-Regular';
+  font-size: xx-large;
+  justify-content: center;
+}
+/* 메뉴&검색창 */
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  flex-wrap: wrap;
+}
+/* 메뉴 */
+.menu>ul{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+li:hover{
+  background-color: yellowgreen;
+  color: white;
+}
+li{
+  list-style: none;
+  padding: 1vh 2vw;  
+}
+/* 검샏창 */
+.search{
+  width:15vw; height: 100%; 
+  align-items: center;
+  margin: 3vh 1vw;
+  background-color: rgba(153, 205, 50, 0.196);
+}
+.serachI{
+  width: 20%;
+}
+  input[type="text"] {
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .loginBtn {
+    font-size: 13px;
+    width: 20vw;
+    display: flex;
+    margin: 2vh 1vw;
+  }
+  .menu{
+    font-size: 12px;
+  }
+  .menu >ul{
+    margin: 0;
+  } 
+  .search {
+    width: 80vw; margin: 0;
+  }
+}
