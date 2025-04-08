@@ -3,9 +3,12 @@ import React, { useEffect } from 'react'
 const ProductAll = () => {
     //get api
     const getProducts= async()=>{
-        let url = `https://my-json-server.typicode.com/roseraph502on/shoppingMall`
+        //local
+        // let url = `http://localhost:5000/products`
+        //배포
+        let url = `https://my-json-server.typicode.com/roseraph502on/shoppingMall/products`
         let response = await fetch(url);
-        let data = await response.json();
+        letdata = await response.json();
         console.log(data);
     }
     useEffect(()=>{
