@@ -37,11 +37,12 @@ a:hover{color: yellowgreen;}
 }
 /* 로그인버튼 */
 .loginBtn{
-  width: 10vw;
+  width: 8vw;
   float:right;
   font-size: 12px;
   align-items: center;
   text-align: center;
+  display: flex;
 }
 .loginBtn > div {margin-left: 1vw;}
 /* 로고 */
