@@ -158,12 +158,16 @@ a:hover{color: yellowgreen !important;}
   .menu{
     font-size: 12px;
   }
-  li{
+  .menu>ul>li{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .pCards{
+    padding: 1vh 2vw;
   }
   .logInCard{
     width: 80vw;
   }
   .logInCard input{
     width: 70vw;}
+
 }
