@@ -1,12 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 
-const ProductCard = () => {
+const ProductCard = ({item}) => {
+    const navigate = useNavigate();
+    const showDetail=()=>{
+      navigate(`/product/${item.id}`);
+      console.log("p clk",item.id);
+    };
   return (
-    <div>
-      <img src="" alt="" />
-      <div>이름</div>
-      <div>$</div>
-      <div>신제품</div>
+    <div className='pCard' onClick={showDetail}>
+      <img src={item?.img}/>
+      <div>{item?.title}</div>
+      <div>{item?.price}</div>
+      <div>{item?.new == true ? "New":""}</div>
     </div>
   )
 }

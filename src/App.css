@@ -1,32 +1,36 @@
+/* font-family: 'PartialSansKR-Regular'; */
 @font-face {
   font-family: 'PartialSansKR-Regular';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-    font-family: '양진체';
-    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* font-family: 'S-CoreDream-3Light'; */
 @font-face {
   font-family: 'S-CoreDream-3Light';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+/* font-family: 'GmarketSansMedium'; */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@import "tailwindcss";
 
 body{
   font-family: 'S-CoreDream-3Light';
 }
-a{color: black;}
-a:hover{color: yellowgreen;}
+a{color: black !important; text-decoration: none  !important;}
+a:hover{color: yellowgreen !important;}
 
 #root {
-  width: 100vw; height: 100vh;
+  width: 100vw; 
+  height: 100vh;
   margin: 0 auto;
-  text-align: center;
 }
 
 /* 상단바 */
@@ -43,6 +47,7 @@ a:hover{color: yellowgreen;}
   align-items: center;
   text-align: center;
   display: flex;
+  margin: 1vw;
 }
 .loginBtn > div {margin-left: 1vw;}
 /* 로고 */
@@ -67,32 +72,81 @@ a:hover{color: yellowgreen;}
   justify-content:center;
   flex-wrap: wrap;
 }
-li:hover{
+.menu>ul>li:hover{
   background-color: yellowgreen;
   color: white;
 }
-li{
+.menu>ul>li{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   list-style: none;
   padding: 1vh 2vw;  
 }
 /* 검샏창 */
 .search{
-  width:15vw; height: 100%; 
+  width: 100%;
+  justify-content:center;
   align-items: center;
-  margin: 3vh 1vw;
-  background-color: rgba(153, 205, 50, 0.196);
+  display: flex;
+  margin: 1vh 0; 
+  border-bottom: 2px solid yellowgreen;
 }
-.serachI{
-  width: 20%;
-}
-  input[type="text"] {
-    width: 70%;
-    border: none;
-    outline: none;
-    padding: 0.5rem;
-    background-color: transparent;
+  
+.search > input{
+  width: 50%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  background-color: transparent;
 }
 
+/* 제품카드 */
+.pCards{
+  padding: 1vh 3vw;
+}
+.pCard{
+  padding: 2vh 2vh 0 2vh;
+  font-size: small;
+  font-family: 'GmarketSansMedium'; 
+  font-weight: 300;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.pCard:hover{
+  transform: scale(1.03);
+  z-index: 10;
+  box-shadow: 4px 4px 10px yellowgreen;
+}
+.pCard > img,.pCard >div{
+  margin-bottom: 2vh;
+}
+
+/* 로그인 */
+.logInCard{
+  width: 40vw;
+  margin: 0 auto; 
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'GmarketSansMedium';
+  display: flexbox;
+}
+.logInCard input{
+  width: 30vw;
+  height: 7vh;
+  background-color: rgba(153, 205, 50, 0.218);
+  border-radius: 5px;
+}
+.LInCd{
+  margin: 2vh;
+  justify-content: center;
+}
+.logInCard button{
+  background-color: yellowgreen;
+  color: white; 
+}
 /* 모바일 */
 @media (max-width: 768px) {
   .loginBtn {
@@ -104,10 +158,12 @@ li{
   .menu{
     font-size: 12px;
   }
-  .menu >ul{
-    margin: 0;
-  } 
-  .search {
-    width: 80vw; margin: 0;
+  li{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .logInCard{
+    width: 80vw;
+  }
+  .logInCard input{
+    width: 70vw;}
 }
