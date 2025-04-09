@@ -101,7 +101,7 @@ a:hover{color: yellowgreen !important;}
 
 /* 제품카드 */
 .pCards{
-  padding: 1vh 3vw;
+  padding: 1vh 10vw;
 }
 .pCard{
   padding: 2vh 2vh 0 2vh;
