@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* font-family: 'GmarketSansLight'; */
 @font-face {
   font-family: 'GmarketSansLight';
@@ -12,6 +13,7 @@
   font-weight: 300;
   font-style: normal;
 }
+
 /* font-family: "source-han-sans-kr-variable", sans-serif;
 font-variation-settings: "wght" 250; */
 /* font-family: "pretendard", sans-serif;
@@ -20,22 +22,29 @@ font-style: normal; */
 @import "tailwindcss";
 
 
-body{
+body {
   font-family: "source-han-sans-kr-variable";
   background-color: #f9f9f9;
 }
-a{color: black !important; text-decoration: none  !important;}
-a:hover{color: yellowgreen !important;}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: yellowgreen !important;
+}
 
 #root {
-  width: 100vw; 
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
 }
 
 /* 상단바 */
-.nav{
-  display: flex; 
+.nav {
+  display: flex;
   width: 100vw;
   justify-content: space-between;
   background-color: #fff;
@@ -43,8 +52,8 @@ a:hover{color: yellowgreen !important;}
 }
 
 /* 로그인버튼 */
-.loginBtn{
-  float:right;
+.loginBtn {
+  float: right;
   font-size: 12px;
   align-items: center;
   text-align: center;
@@ -52,52 +61,61 @@ a:hover{color: yellowgreen !important;}
   margin: 2vh;
 
 }
-.loginBtn > div {margin-left: 1vw;}
+
+.loginBtn>div {
+  margin-left: 1vw;
+}
+
 /* 로고 */
-.logo{
+.logo {
   width: 100%;
   display: flex;
   font-family: 'PartialSansKR-Regular';
   font-size: xx-large;
   justify-content: center;
 }
+
 /* 메뉴&검색창 */
-.menu{
+.menu {
   width: 100%;
   display: flex;
   justify-content: center;
   float: right;
   flex-wrap: wrap;
 }
+
 /* 메뉴 */
-.menu>ul{
+.menu>ul {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
 }
-.menu>ul>li:hover{
+
+.menu>ul>li:hover {
   color: yellowgreen;
-  font-weight: bold;  
+  font-weight: bold;
   /* box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); */
   font-family: "pretendard", sans-serif;
   border-radius: 5px;
 }
-.menu>ul>li{
+
+.menu>ul>li {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   list-style: none;
-  padding: 1vh 2vw;  
+  padding: 1vh 2vw;
 }
+
 /* 검샏창 */
-.search{
+.search {
   width: 100%;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   display: flex;
-  margin: 1vh 0; 
+  margin: 1vh 0;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
 }
-  
-.search > input{
+
+.search>input {
   width: 50%;
   border: none;
   outline: none;
@@ -106,41 +124,47 @@ a:hover{color: yellowgreen !important;}
 }
 
 /* 제품카드 */
-.pCards{
+.pCards {
   padding: 2vh 10vw;
   background-color: #f9f9f9;
 }
-.pCards>div{
-width: 80%;
-margin: 0 auto;
+
+.pCards>div {
+  width: 80%;
+  margin: 0 auto;
 }
-.pCard{
-    
+
+.pCard {
+
   justify-content: center;
   background-color: #fff;
   padding: 2vh 2vh 0 2vh;
   font-size: small;
-  font-family: 'GmarketSansMedium'; 
+  font-family: 'GmarketSansMedium';
   font-weight: 300;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-.pCard:hover{
+
+.pCard:hover {
   transform: scale(1.03);
   z-index: 10;
   box-shadow: 4px 4px 4px yellowgreen;
 }
-.pCard > img,.pCard >div{
+
+.pCard>img,
+.pCard>div {
   margin-bottom: 1vh;
 }
-.newStk{
+
+.newStk {
   color: yellowgreen;
 }
 
 /* 로그인 */
-.logInCard{
+.logInCard {
   width: 40vw;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 2vh;
   display: flex;
   justify-content: center;
@@ -150,47 +174,55 @@ margin: 0 auto;
   font-family: 'GmarketSansMedium';
   display: flexbox;
 }
-.logInCard input{
+
+.logInCard input {
   width: 30vw;
   height: 7vh;
   background-color: rgba(153, 205, 50, 0.218);
   border-radius: 5px;
 }
-.LInCd{
+
+.LInCd {
   margin: 2vh;
   justify-content: center;
 }
-.logInCard button{
+
+.logInCard button {
   background-color: yellowgreen;
-  color: white; 
+  color: white;
 }
 
 /* 제품 상세 */
-.PdDetail{
+.PdDetail {
   width: 100vw;
   display: flex;
   justify-content: center;
   padding: 2vw;
 }
-.PdDetail>div{
+
+.PdDetail>div {
   width: 90vh;
   display: flex;
   background-color: #fff;
   padding: 2vh;
 }
-.PdDetail img{
-  width: 45%; 
+
+.PdDetail img {
+  width: 45%;
   justify-content: center;
 
 }
-.infors{
+
+.infors {
   width: 50%;
 }
-.infor{
+
+.infor {
   width: 100%;
   margin-bottom: 1vh;
 }
-.infors>button{
+
+.infors>button {
   width: 100%;
   margin-top: 80%;
   background-color: yellowgreen;
@@ -198,10 +230,11 @@ margin: 0 auto;
 
 /* 모바일 */
 .hamburger {
-  /* display: none;  */
+  display: none;
   position: absolute;
-  top: 2vw; left: 2vw;
-  z-index: 0; 
+  top: 2vw;
+  left: 2vw;
+  z-index: 0;
   width: 7vh;
   height: 4vh;
 }
@@ -209,7 +242,8 @@ margin: 0 auto;
 
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* 모바일에서 햄버거 버튼 보이기 */
+    display: block;
+    /* 모바일에서 햄버거 버튼 보이기 */
   }
 
   .loginBtn {
@@ -217,22 +251,34 @@ margin: 0 auto;
     display: flex;
     margin: 2vh 3vw;
   }
-  .nav{
+
+  .nav {
     padding-bottom: 3vh;
   }
-  .menu{
+
+  .menu {
     font-size: 12px;
+    display: none;
   }
-  .menu>ul>li{
+
+  .menu>ul>li {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .pCards{
+
+  .pCards {
     padding: 1vh 4vw;
   }
-  .logInCard{
+
+  .logInCard {
     width: 80vw;
   }
-  .logInCard input{
-    width: 70vw;}
 
+  .logInCard input {
+    width: 70vw;
+  }
+
+  .menu.open {
+    display: block;
+    /* 토글 시 메뉴 보이기 */
+  }
 }

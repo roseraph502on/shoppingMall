@@ -33,8 +33,8 @@ const Navbar = ({ authenticate, onLogout }) => {
         <a href="/" className='logo'>Clothes #</a>
       </div>
       {/* 메뉴 */}
-      {menuOpen &&(
-        <div className='menu'>
+      
+        <div className={`menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             {menuList.map(menu => <li># {menu}</li>)}
           </ul>
@@ -44,7 +44,7 @@ const Navbar = ({ authenticate, onLogout }) => {
             <input type="text" onKeyDown={search} />
           </div>
         </div>
-        )}
+      
       <ToggleButton className="hamburger"
         checked={menuOpen} 
         onChange={(e) => setMenuOpen(e.value)} 
