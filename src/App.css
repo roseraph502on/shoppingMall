@@ -5,24 +5,22 @@
   font-weight: normal;
   font-style: normal;
 }
-/* font-family: 'S-CoreDream-3Light'; */
+/* font-family: 'GmarketSansLight'; */
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-/* font-family: 'GmarketSansMedium'; */
-@font-face {
-  font-family: 'GmarketSansMedium';
+  font-family: 'GmarketSansLight';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
+/* font-family: "source-han-sans-kr-variable", sans-serif;
+font-variation-settings: "wght" 250; */
+
 @import "tailwindcss";
 
+
 body{
-  font-family: 'S-CoreDream-3Light';
+  font-family: "source-han-sans-kr-variable";
+  background-color: #f9f9f9;
 }
 a{color: black !important; text-decoration: none  !important;}
 a:hover{color: yellowgreen !important;}
@@ -35,10 +33,13 @@ a:hover{color: yellowgreen !important;}
 
 /* 상단바 */
 .nav{
+  display: flex; 
   width: 100vw;
-  height: 30vh;
   justify-content: space-between;
+  background-color: #fff;
+  flex-direction: column;
 }
+
 /* 로그인버튼 */
 .loginBtn{
   width: 8vw;
@@ -47,7 +48,7 @@ a:hover{color: yellowgreen !important;}
   align-items: center;
   text-align: center;
   display: flex;
-  margin: 1vw;
+  margin: 5px;
 }
 .loginBtn > div {margin-left: 1vw;}
 /* 로고 */
@@ -75,6 +76,7 @@ a:hover{color: yellowgreen !important;}
 .menu>ul>li:hover{
   background-color: yellowgreen;
   color: white;
+  font-weight: bold;
 }
 .menu>ul>li{
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -88,7 +90,7 @@ a:hover{color: yellowgreen !important;}
   align-items: center;
   display: flex;
   margin: 1vh 0; 
-  border-bottom: 2px solid yellowgreen;
+  box-shadow: 0 6px 6px rgba(153, 205, 50, 0.314);
 }
   
 .search > input{
@@ -101,9 +103,17 @@ a:hover{color: yellowgreen !important;}
 
 /* 제품카드 */
 .pCards{
-  padding: 1vh 10vw;
+  padding: 2vh 10vw;
+  background-color: #f9f9f9;
+}
+.pCards>div{
+width: 80%;
+margin: 0 auto;
 }
 .pCard{
+    
+  justify-content: center;
+  background-color: #fff;
   padding: 2vh 2vh 0 2vh;
   font-size: small;
   font-family: 'GmarketSansMedium'; 
@@ -117,7 +127,10 @@ a:hover{color: yellowgreen !important;}
   box-shadow: 4px 4px 10px yellowgreen;
 }
 .pCard > img,.pCard >div{
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
+}
+.newStk{
+  color: yellowgreen;
 }
 
 /* 로그인 */
@@ -147,6 +160,37 @@ a:hover{color: yellowgreen !important;}
   background-color: yellowgreen;
   color: white; 
 }
+
+/* 제품 상세 */
+.PdDetail{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 2vw;
+}
+.PdDetail>div{
+  width: 90vh;
+  display: flex;
+  background-color: #fff;
+  padding: 2vh;
+}
+.PdDetail img{
+  width: 45%; 
+  justify-content: center;
+
+}
+.infors{
+  width: 50%;
+}
+.infor{
+  width: 100%;
+  margin-bottom: 1vh;
+}
+.infors>button{
+  width: 100%;
+  margin-top: 80%;
+  background-color: yellowgreen;
+}
 /* 모바일 */
 @media (max-width: 768px) {
   .loginBtn {
@@ -162,7 +206,7 @@ a:hover{color: yellowgreen !important;}
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .pCards{
-    padding: 1vh 2vw;
+    padding: 1vh 4vw;
   }
   .logInCard{
     width: 80vw;

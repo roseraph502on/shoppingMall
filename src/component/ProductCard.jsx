@@ -11,8 +11,8 @@ const ProductCard = ({item}) => {
     <div className='pCard' onClick={showDetail}>
       <img src={item?.img}/>
       <div>{item?.title}</div>
-      <div>{item?.price}</div>
-      <div>{item?.new == true ? "New":""}</div>
+      <div>₩ {item?.price}</div>
+      <div className='newStk'>{item?.new == true ? "New":""}</div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from "react-router";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './App.css'
 import Navbar from './component/Navbar';
 import ProductAll from './page/ProductAll';
