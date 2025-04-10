@@ -14,7 +14,9 @@
 }
 /* font-family: "source-han-sans-kr-variable", sans-serif;
 font-variation-settings: "wght" 250; */
-
+/* font-family: "pretendard", sans-serif;
+font-weight: 700;
+font-style: normal; */
 @import "tailwindcss";
 
 
@@ -42,13 +44,13 @@ a:hover{color: yellowgreen !important;}
 
 /* 로그인버튼 */
 .loginBtn{
-  width: 8vw;
   float:right;
   font-size: 12px;
   align-items: center;
   text-align: center;
   display: flex;
-  margin: 5px;
+  margin: 2vh;
+
 }
 .loginBtn > div {margin-left: 1vw;}
 /* 로고 */
@@ -74,9 +76,11 @@ a:hover{color: yellowgreen !important;}
   flex-wrap: wrap;
 }
 .menu>ul>li:hover{
-  background-color: yellowgreen;
-  color: white;
-  font-weight: bold;
+  color: yellowgreen;
+  font-weight: bold;  
+  /* box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); */
+  font-family: "pretendard", sans-serif;
+  border-radius: 5px;
 }
 .menu>ul>li{
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -90,7 +94,7 @@ a:hover{color: yellowgreen !important;}
   align-items: center;
   display: flex;
   margin: 1vh 0; 
-  box-shadow: 0 6px 6px rgba(153, 205, 50, 0.314);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
 }
   
 .search > input{
@@ -124,7 +128,7 @@ margin: 0 auto;
 .pCard:hover{
   transform: scale(1.03);
   z-index: 10;
-  box-shadow: 4px 4px 10px yellowgreen;
+  box-shadow: 4px 4px 4px yellowgreen;
 }
 .pCard > img,.pCard >div{
   margin-bottom: 1vh;
@@ -191,13 +195,30 @@ margin: 0 auto;
   margin-top: 80%;
   background-color: yellowgreen;
 }
+
 /* 모바일 */
+.hamburger {
+  display: none; 
+  position: absolute;
+  top: 2vw; left: 2vw;
+  z-index: 0; 
+  width: 7vh;
+  height: 4vh;
+}
+
+
 @media (max-width: 768px) {
+  .hamburger {
+    display: block; /* 모바일에서 햄버거 버튼 보이기 */
+  }
+
   .loginBtn {
-    font-size: 13px;
-    width: 20vw;
+    font-size: 15px;
     display: flex;
-    margin: 2vh 1vw;
+    margin: 2vh 3vw;
+  }
+  .nav{
+    padding-bottom: 3vh;
   }
   .menu{
     font-size: 12px;
