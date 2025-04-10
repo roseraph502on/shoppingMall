@@ -198,7 +198,7 @@ margin: 0 auto;
 
 /* 모바일 */
 .hamburger {
-  display: none; 
+  /* display: none;  */
   position: absolute;
   top: 2vw; left: 2vw;
   z-index: 0; 
