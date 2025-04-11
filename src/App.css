@@ -21,14 +21,13 @@ font-weight: 700;
 font-style: normal; */
 @import "tailwindcss";
 
-.scrollbar-custom::-webkit-scrollbar {
-  display: none;
-}
+
 
 body {
   font-family: "source-han-sans-kr-variable";
   background-color: #f9f9f9;
   color: black !important;
+  overflow-x: hidden;
 }
 
 a {
