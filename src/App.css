@@ -172,8 +172,9 @@ a {
   margin-top: 5vh;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'GmarketSansMedium';
   display: flexbox;
+  font-family: "pretendard";
+  font-weight: bold;
 }
 
 .logInCard input {
