@@ -21,6 +21,9 @@ font-weight: 700;
 font-style: normal; */
 @import "tailwindcss";
 
+.scrollbar-custom::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-family: "source-han-sans-kr-variable";
@@ -56,11 +59,11 @@ a {
 /* 로그인버튼 */
 .loginBtn {
   float: right;
-  font-size: 12px;
+  font-size: 16px;
   align-items: center;
   text-align: center;
   display: flex;
-  margin: 2vh;
+  margin: 2vh 3vw;
 
 }
 .nav button{
