@@ -10,6 +10,10 @@ const Navbar = ({ authenticate, onLogout }) => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const logoClick = () => {
+    console.log("loclk")
+    navigate(`/`); 
+  };
   const search = (event) => {
     if (event.key === "Enter") {
       let keyword = event.target.value;
@@ -30,13 +34,14 @@ const Navbar = ({ authenticate, onLogout }) => {
           </a>)}
       </div>
       <div>{/* 로고 */}
-        <a href="/" className='logo'>Clothes #</a>
+    
+        <div onClick={logoClick} className='logo'>Clothes #</div>
       </div>
       {/* 메뉴 */}
       
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
           <ul>
-            {menuList.map(menu => <li># {menu}</li>)}
+            {menuList.map((menu, index)=> <li key={index} ># {menu}</li>)}
           </ul>
           {/* 검색창 */}
           <div className='search'>
