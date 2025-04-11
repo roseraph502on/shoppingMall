@@ -63,7 +63,9 @@ a {
   margin: 2vh;
 
 }
-
+.nav button{
+  background-color: rgba(153, 205, 50, 0.696);
+}
 .loginBtn>div {
   margin-left: 1vw;
 }
