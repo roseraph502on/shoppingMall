@@ -25,6 +25,7 @@ font-style: normal; */
 body {
   font-family: "source-han-sans-kr-variable";
   background-color: #f9f9f9;
+  color: black !important;
 }
 
 a {
